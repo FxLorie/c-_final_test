@@ -10,5 +10,16 @@ string[] InputArray()
 }
 
 string[] array = InputArray();
-
+int n = 0;
+for(int i = 0; i < array.Length; i++)
+    if (array[i].Length <= 3)
+        n++;
+string[] newArray = new string[n];
+int j = 0;
+  for(int i = 0; i < array.Length; i++)
+    if (array[i].Length <= 3)
+    {
+        newArray[j] = array[i];
+        j++;
+    }
 PrintArrayInt(newArray);
